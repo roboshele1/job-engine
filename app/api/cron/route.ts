@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { scrapeJobsFromJSearch, deduplicateJobs } from '@/lib/jobScraper'
-import { saveJobs } from '@/lib/storage'
+import { scrapeJobsFromJSearch, deduplicateJobs } from '../../../lib/jobScraper'
+import { saveJobs } from '../../../lib/storage'
 
 export async function POST(req: NextRequest) {
   const auth = req.headers.get('authorization')
